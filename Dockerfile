@@ -3,7 +3,7 @@ FROM ubuntu:14.04
 RUN apt-get update
 RUN apt-get upgrade -y
 
-RUN apt-get -y install apache2 php5 php5-cli curl vim supervisor
+RUN apt-get -y install apache2 php5 php5-cli php5-mysqlnd curl vim supervisor
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 RUN cd /var/www/html && composer require slim/slim "^3.0"
 
