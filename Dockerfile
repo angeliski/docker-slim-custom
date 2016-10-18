@@ -2,7 +2,7 @@ FROM ubuntu:14.04
 
 RUN apt-get update && apt-get upgrade -y && apt-get -y install apache2 php5 php5-cli curl vim supervisor  mysql-client php5-mysql libapache2-mod-auth-mysql
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-RUN cd /var/www/html && composer require slim/slim "^3.0" && composer require palanik/corsslim  "dev-slim3"
+RUN cd /var/www/html && composer require slim/slim "^3.0" && composer require palanik/corsslim  "dev-slim3" && composer require mikehaertl/phpwkhtmltopdf
 
 RUN rm -rf /var/www/html/index.html
 
