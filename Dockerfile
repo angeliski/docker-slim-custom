@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM ubuntu:cosmic
 
 RUN apt-get update && apt-get upgrade -y && apt-get -y install apache2 php5 php5-cli curl vim supervisor  mysql-client php5-mysql libapache2-mod-auth-mysql
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
